@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>errores</title>
+</head>
+<body style="background-color: rgb(35, 15, 60); color: lightgray;">
+    <h1>Manejo de Errores</h1>
+    
+    <script>
+    
+        try{
+            console.log('en el try se agrega e codigo a evaluar')
+            noExiste;
+            console.log('segundo mensaje en el try')
+        }catch(error)
+        {
+            console.log('catch, captura cualquier error surgido o lanzado en en el try')
+            console.log(error);
+        }finally{
+            console.log('el bloque finally se ejecutara siempre al final del unbloque try-catch')
+        }
+
+        try{
+            let numero='caracter';
+            if(isNaN(numero)){
+                throw new Error('El caracter  introducido no es un numero');
+            }
+            console.log(numero*numero);
+        }catch(error){
+            console.log(`se produjo el siguiente error: ${error}`)
+        }
+
+
+    </script>
+</body>
+</html>

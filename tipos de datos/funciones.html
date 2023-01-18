@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones o metodos</title>
+</head>
+<body>
+    <h1>Funciones o metodos</h1>
+    <script>
+        //funcion declarada
+
+        function funcion1()
+        {
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+        <!-- funcion1(); -->
+
+        function miFuncionConValor()
+        {
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+            return "La funcion  ha retornado una cadena de texto"
+        }
+
+        let valorFuncion =  miFuncionConValor();
+
+        console.log(valorFuncion);
+
+        function saludar(nombre='Desconocido', edad=0)
+        {
+            console.log(`Hola mi nombre es: ${nombre} y tengo ${edad} años.`);
+        }
+
+        saludar('hugo',38);
+        saludar();
+
+        // funciones delcaradas vs funciones expresadas
+        funcionDeclarada();
+
+        function funcionDeclarada()
+        {
+            console.log('esto esw una duncion declarada, puede invocarse en cualquier parte de nuestro codigo incluso antes de que la funcion sea declarada');
+        }
+
+        funcionDeclarada();
+        
+        //funcionExpresada();
+        /*can't access lexical declaration 'funcionExpresada' before initialization*/
+
+        // funcion anonima
+        const funcionExpresada= function (){
+            console.log('esto es una funcion expresada, es decir una funcion que se le ha asignado como un valor a una variable, si incovamos esta funcion antes de su definicion js nos dira');
+        }
+        
+        funcionExpresada();
+    </script>
+</body>
+</html>

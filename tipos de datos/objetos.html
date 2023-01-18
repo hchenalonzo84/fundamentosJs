@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>>Objetos  en JS</title>
+</head>
+<body>
+    <h1>OBjetos en JS</h1>
+
+    <script>
+        const b ={};
+        console.log(b);
+
+        const c = new Object();
+        console.log(c);
+         // dentro de un objeto a las variables se les van a llamar atributos/propiedades y a las funciones se les llaman metodos
+        const Hugo ={
+            nombre:"hugo",
+            apellido:"Chenal",
+            edad:38,
+            pasatiempos:["correr","hacer ejercicios", "videojuegos"],
+            soltero: true,
+            contacto:{
+                email: "roland8410@hotmail.con",
+                tel:79511665,
+                cel:45347706
+            },
+            saludar: function(){ 
+                console.log("Hola");
+            },
+            decirMiNombre: function(){
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo la edad de: ${this.edad} años y me puedes  contactar por: ${this.contacto.email}`);
+            }
+
+        }
+
+        console.log(Hugo);
+        console.log(Hugo.nombre);
+        console.log(Hugo.apellido);
+        console.log(Hugo.edad);
+        console.log(Hugo.pasatiempos[0]);
+        console.log(Hugo.pasatiempos[1]);
+        console.log(Hugo.pasatiempos[2]);
+        console.log(Hugo.soltero);
+        console.log(Hugo.contacto.email);
+        console.log(Hugo.contacto.tel);
+        console.log(Hugo.contacto.cel);
+        Hugo.saludar();
+        Hugo.decirMiNombre();
+
+
+        console.log(Object.keys(Hugo));
+        console.log(Object.values(Hugo));
+        console.log(Hugo.hasOwnProperty("nombre"));
+        console.log(Hugo.hasOwnProperty("nacimiento"));
+    </script>
+    
+</body>
+</html>

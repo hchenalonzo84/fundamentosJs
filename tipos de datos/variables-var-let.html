@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fundamentos de javascript</title>
+</head>
+<body>
+    <h1>Fundamentos javascript</h1>
+    <script>
+        var hola ='Hola mundo';
+        let hello='Hello  world';
+        console.log(hola);
+        console.log(hello);
+        // objeto windows del navegador en esta se alojan todas las variables globales tipo var
+        console.log(window);
+        console.log(window.hola);
+        // indefinido porque es una variable tipo let
+        console.log(window.hello);
+
+        // de la forma antigua como se declaraban antes las variables y sus alcances
+
+        var musica ='Rock';
+        console.log('Variable musica antes del bloque',musica);
+        // esto es un blque 
+        {
+            var musica='pop';
+            console.log('variable musica dentro del bloque', musica);
+        }
+        console.log('variable musica despues del bloque', musica);
+
+        // la nueva forma a partir de ES6
+        console.log('nueva forma a partir de ES6')
+        console.log(' ');
+        let musica2 ='Rock';
+        console.log('Variable musica antes del bloque',musica2);
+        // esto es un blque 
+        {
+            let musica2='pop';
+            console.log('variable musica dentro del bloque', musica2);
+        }
+        console.log('variable musica despues del bloque', musica2);
+
+    </script>
+</body>
+</html>
