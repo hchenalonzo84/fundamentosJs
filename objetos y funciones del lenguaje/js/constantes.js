@@ -1,10 +1,16 @@
 export const PI= Math.PI;
 
 export let usuario= "Hugo";
-let password="Qwety";
-export default password;
+const password="Qwety";
+//export default password;
 
 const hello = ()=> console.log('hola');
-export function saludar() {
+export default function saludar() {
     console.log('Hola modulos ES6')
 }
+
+ export  class Hi{
+    constructor(){
+        console.log('hola Clases +ES6')
+    }
+ }
